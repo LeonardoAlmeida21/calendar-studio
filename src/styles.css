@@ -785,7 +785,7 @@ input[type="checkbox"] {
   outline: 2px solid #4b7e65;
   outline-offset: -2px;
 }
-.event-card span:not(.range-line) {
+.event-card span {
   min-width: 0;
 }
 .event-card .continuation {
@@ -801,30 +801,6 @@ input[type="checkbox"] {
 }
 .continuation.after {
   right: 2px;
-}
-.event-card.daily-range {
-  padding-bottom: 13px;
-}
-.range-line {
-  position: absolute;
-  bottom: 5px;
-  left: 5px;
-  right: -8px;
-  height: 1.5px;
-  background: currentColor;
-  opacity: 0.65;
-  z-index: 1;
-}
-.range-line:after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: -2px;
-  width: 5px;
-  height: 5px;
-  border-top: 1.5px solid currentColor;
-  border-right: 1.5px solid currentColor;
-  transform: rotate(45deg);
 }
 .document-footer {
   padding: 10px 14px;

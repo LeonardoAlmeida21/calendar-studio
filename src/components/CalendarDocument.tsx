@@ -170,7 +170,7 @@ export const CalendarDocument = forwardRef<HTMLDivElement, DocumentProps>(
                                   key={`${segment.event.id}-${index}`}
                                   tabIndex={onEvent ? 0 : -1}
                                   onClick={() => onEvent?.(segment.event)}
-                                  className={`event-card ${selectedId === segment.event.id ? "selected" : ""} ${segment.event.display === "daily" && segment.event.start !== segment.event.end ? "daily-range" : ""}`}
+                                  className={`event-card ${selectedId === segment.event.id ? "selected" : ""}`}
                                   aria-label={`${segment.event.text}, ${segment.event.start}${segment.event.end !== segment.event.start ? ` a ${segment.event.end}` : ""}`}
                                   style={{
                                     background: colors.background,
@@ -193,10 +193,6 @@ export const CalendarDocument = forwardRef<HTMLDivElement, DocumentProps>(
                                       <span className="continuation after">
                                         ›
                                       </span>
-                                    )}
-                                  {segment.event.display === "daily" &&
-                                    segment.continuesAfter && (
-                                      <span className="range-line" />
                                     )}
                                 </button>
                               );
